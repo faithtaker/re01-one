@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: url(https://ts1.cn.mm.bing.net/th/id/R-C.c2fbd95838ab05a1061f757e1890c95c?rik=900wol8ed1TnTQ&riu=http%3a%2f%2fimgs.aixifan.com%2flive%2f1483601919402%2f1483601919402.jpg&ehk=LDzvCsGuMQHtOymJChN%2fMxt%2fkQWjO4pZqK8gN4HSWTQ%3d&risl=&pid=ImgRaw&r=0);
+        background-repeat: no-repeat;
+        background-position: 0% 0%;
+        background-size: cover;
+      }
+
+      .whitebox {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: rgba(205, 204, 204, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      .shurulan {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .neirong {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4451fe;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #7b7a95;
+      }
+
+      .button:hover {
+        background-color: #304184;
+      }
+
+      .button:active {
+        background-color: #2a98ca;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+
+      input{
+        border: none;
+        outline: none;
+        width: 30%;
+        height: 50px;
+        border-bottom: solid;
+        background :none;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="whitebox" style="background-color: rgba(246, 246, 246, 0.8)">
+      <div class="neirong">
+        <h1>HelloWorld! 今天要也要创造些什么吗？</h1>
+
+        <div class="shurulan">
+
+            <input id="message" type="text" placeholder="请输入内容" />
+            <span id="anNiu" class="button" style="cursor: pointer" onclick="dianji()"
+              >确定</span>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        
+        let isOK = false;
+        function dianji() {
+            let message = window.document.getElementById("message");
+            let anNiu = window.document.getElementById("anNiu");
+            
+            if (isOK) {
+                isOK = false;//切换状态
+                anNiu.innerText = "确定";
+                message.readOnly = false;
+                document.getElementById("message").value = "";
+                window.localStorage.removeItem("shi");
+              }else{
+                isOK = true;
+                anNiu.innerText = "删除";
+                message.readOnly = true;
+               window.localStorage.setItem("shi",message.value);
+              }
+
+     
+        }
+        let data = window.localStorage.getItem("shi");
+        if (data) {
+          isOK = true;
+          window.document.getElementById("anNiu").innerText = "删除";
+          document.getElementById("message").value = data;
+          change();
+        }
+    </script>
+  </body>
+</html>

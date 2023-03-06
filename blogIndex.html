@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .liebiaoElem {
+        height: 160px;
+      }
+
+      .content::-webkit-scrollbar {
+        display: none;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+
+      .mgb8 {
+        margin-bottom: 8px;
+      }
+      .mgl8 {
+        margin-left: 8px;
+      }
+      .yinying {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+
+      .nav {
+        border-bottom: solid 1px rgb(108, 106, 106);
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div
+      class="cebian flex column"
+      style="width: 200px; z-index: 2; border-right: solid 1px gray"
+    >
+      <!-- 头像区 -->
+      <div
+        class="flex"
+        style="
+          height: 60px;
+          justify-content: center;
+          align-items: center;
+          border-bottom: solid 1px gray;
+        "
+      >
+        <img
+          style="border-radius: 50%; border: solid 1px; width: 50px"
+          src="https://img.wxcha.com/m00/12/db/594dd9fb43029a58df9acc0e4591d94b.jpg?down"
+        />
+
+        <p>&ensp; 杰尼龟</p>
+      </div>
+
+      <!-- 导航区 -->
+      <div class="flex column flex1">
+        <div class="nav mgt8" style="text-align: center; height: 40px">123</div>
+        <div class="nav mgt8" style="text-align: center; height: 40px">123</div>
+        <div class="nav mgt8" style="text-align: center; height: 40px">123</div>
+        <div class="nav mgt8" style="text-align: center; height: 40px">123</div>
+        <button id="bt" onclick="dianZan()">0</button>
+      </div>
+    </div>
+
+    <!-- 主区域 -->
+    <div class="zhuquyu flex flex1 column">
+      <!-- 顶部栏 -->
+      <div
+        class="top"
+        style="
+          height: 60px;
+          flex-shrink: 0;
+          z-index: 2;
+          border-bottom: solid 1px gray;
+        "
+      >
+        dingbulan
+      </div>
+
+      <!-- 内容区 -->
+      <div class="content flex flex1" style="overflow: auto">
+        <!-- 左区 -->
+        <div class="left flex column mg8" style="flex: 3">
+          <!-- 消息区 -->
+          <div class="xiaoxi flex" style="height: 160px; flex-shrink: 0">
+            <div class="flex1 yinying">1</div>
+            <div class="flex1 yinying mgl8">1</div>
+            <div class="flex1 yinying mgl8">1</div>
+            <div class="flex1 yinying mgl8">1</div>
+          </div>
+
+          <!-- 数据区 -->
+          <div class="liebiao flex column">
+            <div class="liebiaoElem yinying mgt8">123</div>
+            <div class="liebiaoElem yinying mgt8">123</div>
+            <div class="liebiaoElem yinying mgt8">123</div>
+            <div class="liebiaoElem yinying mgt8">123</div>
+          </div>
+        </div>
+
+        <!-- 右区 -->
+        <div class="right flex column mg8" style="flex: 1">
+          <!-- 1区 -->
+          <div class="space1 yinying" style="height: 200px">11</div>
+          <!-- 2区 -->
+          <div class="space2 yinying mgt8" style="height: 300px">22</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function dianZan() {
+        let dianzaibiaoqian = window.document.getElementById('bt');
+        let dianzanshu = parseInt(dianzaibiaoqian.innerText);
+        let newdianzan = dianzanshu + 1;
+        dianzaibiaoqian.innerText = newdianzan;
+        return
+      }
+    </script>
+  </body>
+</html>

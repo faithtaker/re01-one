@@ -1,0 +1,113 @@
+.wrap {
+  width: 1190px;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.product {
+  background-color: pink;
+  width: 100%;
+  height: 643px;
+  margin: 50px 0;
+}
+
+.product-info {
+  float: left;
+  width: 352px;
+  height: 464px;
+  background-color: paleturquoise;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.small-box {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.gold-box {
+  top: 0;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: gold;
+  opacity: 0.8;
+}
+
+.big-box {
+  overflow: hidden;
+  position: absolute;
+  background-color: aliceblue;
+  width: 500px;
+  height: 500px;
+  top: 0px;
+  left: 354px;
+}
+
+.big-box img {
+  position: relative;
+  width: 890px;
+  height: 890px;
+  
+}
+
+.product-list {
+  background-color: aliceblue;
+  width: 100%;
+  height: 54px;
+}
+
+.arrow-prev,
+.arrow-next {
+  top: 370px;
+  position: absolute;
+  width: 22px;
+  height: 32px;
+  background: url(../imgs/__sprite.png) no-repeat;
+  z-index: 100;
+}
+
+.arrow-prev {
+  background-position: 0 -54px;
+  left: 3px;
+}
+
+.arrow-next {
+  background-position: -78px 0;
+  left: 328px;
+}
+
+.list-info {
+  overflow: hidden;
+  height: 52px;
+  float: left;
+  position: relative;
+  left: 38px;
+  width: 280px;
+}
+
+.list-info ul {
+  float: left;
+  background-position: -50px;
+  width: 520px;
+  height: 54px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0px;
+}
+
+.list-info ul li {
+  float: left;
+  width: 52px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.list-info ul li img {
+  height: 52px;
+  width: 52px;
+}
+
+.list-info ul li img:hover {
+  border: 1px solid red;
+}

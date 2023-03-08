@@ -1,0 +1,256 @@
+.header {
+  width: 100%;
+
+  height: 140px;
+  border-bottom: solid 1px;
+}
+
+.wrap {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-top: 8px;
+  float: left;
+  width: 190px;
+  height: 120px;
+  background: url(../imgs/sprite.png) no-repeat;
+}
+
+.search {
+  float: left;
+}
+.form {
+  position: relative;
+  height: 36px;
+  width: 550px;
+  border: 2px solid red;
+  box-sizing: border-box;
+  margin-top: 38px;
+  margin-left: 70px;
+}
+
+.form input {
+  float: left;
+  width: 425px;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.form button {
+  color: white;
+  height: 100%;
+  width: 111px;
+  background-color: red;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: rgb(170, 32, 32);
+}
+
+.list {
+  position: absolute;
+  margin-top: 75px;
+  margin-left: 260px;
+  background-color: white;
+  border: 1px solid;
+  width: 400px;
+  overflow: hidden;
+  z-index: 100;
+}
+.list p {
+  padding-left: 10px;
+  text-align: left;
+  line-height: 2;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+  z-index: 100;
+}
+.list p:hover {
+  background-color: rgb(227, 193, 193);
+}
+
+.banner {
+  margin-top: 20px;
+  background-color: aliceblue;
+  width: 100%;
+}
+
+.banner-left {
+  background-color: rgb(251, 246, 237);
+  float: left;
+  height: 470px;
+  width: 190px;
+  margin-right: 10px;
+}
+
+.banner-box {
+  background-color: whitesmoke;
+  float: left;
+  height: 470px;
+  width: 790px;
+  margin-right: 10px;
+  z-index: 1;
+}
+
+.slide-banner {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+}
+
+.banner-btn {
+  height: 30px;
+  width: 313px;
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  z-index: 100;
+}
+
+.banner-btn li {
+  margin-top: 8px;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(215, 212, 212);
+  z-index: 100;
+  margin-right: 10px;
+  cursor: grabbing;
+}
+
+.btn-active {
+  border: 2px solid red;
+}
+
+.three-img {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+}
+
+.three-img img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.banner-right {
+  background-color: wheat;
+  float: left;
+  height: 470px;
+  width: 190px;
+}
+
+.prev,
+.next {
+  color: white;
+  font-size: 30px;
+  padding-top: 5px;
+  position: absolute;
+  top: 220px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  z-index: 100;
+  opacity: 0.8;
+  cursor: grabbing;
+}
+
+.prev {
+  left: 0px;
+  border-radius: 0 50% 50% 0;
+}
+
+.next {
+  left: 540px;
+  border-radius: 50% 0 0 50%;
+}
+
+.content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-color: palegreen;
+}
+
+.miaosha,
+.tese,
+.pindao,
+.tuijian {
+  width: 100%;
+  height: 600px;
+  background-color: bisque;
+  margin-top: 20px;
+}
+
+.headerM {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  border-bottom: 3px solid red;
+  z-index: 200;
+}
+
+.searchM {
+  width: 100%;
+  height: 80px;
+
+}
+
+.logoM {
+  position: relative;
+  float: left;
+  width: 125px;
+  height: 40px;
+  background: url(../imgs/sprite.png) no-repeat;
+  background-position: 0 -120px;
+  top: 20px;
+  left: 50px;
+}
+
+.formM {
+  margin: 0 auto;
+  top: -20px;
+}
+
+.listM {
+  position: relative;
+  margin: 0 auto;
+  left: -135px;
+  top: 65px;
+}
+
+
+.kuang{
+  height: 400px;
+  width: 100px;
+  position: absolute;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  top: 30px;
+  right: 40px;
+}
+
+.kuang1,.kuang2,.kuang3,.kuang4{
+  font-size: large;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+
+.kuang-fixed{
+  top: 100px;
+  position: fixed;
+}
